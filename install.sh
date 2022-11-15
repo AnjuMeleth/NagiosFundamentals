@@ -1,23 +1,17 @@
-﻿#!/bin/bash
+#!/bin/bash
 #Installing Nagios Core 4.4.6 in Ubuntu 20.x
 sudo apt-get update
-sudo apt-get install -y autoconf gcc libc6 make wget unzip apache2 php \ libapache2-mod-php7.4 libgd-dev
+sudo apt-get install -y autoconf gcc libc6 make wget unzip apache2 php \
+  libapache2-mod-php7.4 libgd-dev
 sudo apt-get install -y openssl libssl-dev
 cd /tmp
-wget -O nagioscore.tar.gz https://github.com/NagiosEnterprises/nagioscore/archive/nagios-4.4.6.t \ ar.gz
+wget -O nagioscore.tar.gz https://github.com/NagiosEnterprises/nagioscore/archive/nagios-4.4.6.tar.gz
 tar xzf nagioscore.tar.gz
 cd /tmp/nagioscore-nagios-4.4.6/
+sudo ./configure --with-httpd-conf=/etc/apache2/sites-enabled
+sudo make all
 sudo make install-groups-users
 sudo usermod -a -G nagios www-data
-mkdir -p /opt/nagios /etc/nagios /var/nagios
-chown nagios:nagios /opt/nagios /etc/nagios /var/nagios
-sudo ./configure \ 
-    --prefix=/opt/nagios \
-    --sysconfdir=/etc/nagios \
-    --localstatedir=/var/nagios \
-    --libexecdir=/opt/nagios/plugins \
-    --with-httpd-conf=/etc/apache2/sites-enabled
-sudo make all
 sudo make install
 sudo make install-daemoninit
 sudo make install-commandmode
