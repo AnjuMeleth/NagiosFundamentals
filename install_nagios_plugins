@@ -6,11 +6,7 @@ wget --no-check-certificate -O nagios-plugins.tar.gz \ https://github.com/nagios
 tar zxf nagios-plugins.tar.gz
 cd /tmp/nagios-plugins-release-2.3.3/
 sudo ./tools/setup
-sudo ./configure \
-         --prefix=/opt/nagios \
-    --sysconfdir=/etc/nagios \
-    --localstatedir=/var/nagios \
-    --libexecdir=/opt/nagios/plugins
+sudo ./configure 
 sudo make
 sudo make install
 # Then goto services, select and object and reschedule for next check
