@@ -4,9 +4,9 @@ sudo apt-get install -y autoconf gcc libc6 make wget unzip apache2 php \
 	libapache2-mod-php7.0 libgd-dev
 sudo apt-get install -y openssl libssl-dev
 cd /tmp
-wget -O nagioscore.tar.gz https://github.com/NagiosEnterprises/nagioscore/archive/nagios-4.4.5.tar.gz
+wget -O nagioscore.tar.gz https://github.com/NagiosEnterprises/nagioscore/archive/nagios-4.4.6.tar.gz
 tar xzf nagioscore.tar.gz
-cd /tmp/nagioscore-nagios-4.4.5/
+cd /tmp/nagioscore-nagios-4.4.6/
 sudo ./configure --with-httpd-conf=/etc/apache2/sites-enabled
 sudo make all
 sudo make install-groups-users
