@@ -15,9 +15,9 @@
                    "checktype": "1"
                },
               "hostname": "localhost",
-              "servicename": "someservice",
+              "servicename": "HostAlive",
               "state": 1,
-               "output": "WARNING: Danger Will Robinson! | perfdata=1;"
+               "output": "WARNING: Danger | perfdata=1;"
           }
      ]
  }
