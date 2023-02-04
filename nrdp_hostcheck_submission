@@ -1,0 +1,23 @@
+{
+    "checkresults": [
+        {
+                "checkresult": {
+                   "type": "host",
+                   "checktype": "1"
+                },
+                "hostname": "localhost",
+                "state": 0,
+                "output": "Everything looks okay! | perfdata=1;"
+        },   
+        {
+               "checkresult": {
+                   "type": "service",
+                   "checktype": "1"
+               },
+              "hostname": "localhost",
+              "servicename": "someservice",
+              "state": 1,
+               "output": "WARNING: Danger Will Robinson! | perfdata=1;"
+          }
+     ]
+ }
