@@ -5,7 +5,7 @@
                    "type": "host",
                    "checktype": "1"
                 },
-                "hostname": "localhost",
+                "hostname": "linuxhost2",
                 "state": 0,
                 "output": "Everything looks okay!;"
         },
@@ -14,7 +14,7 @@
                    "type": "service",
                    "checktype": "1"
                 },
-                "hostname": "localhost",
+                "hostname": "linuxhost2",
                 "servicename": "HostAlive",
                 "state": 1,
                 "output": "Everything looks okay!;"
