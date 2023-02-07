@@ -8,6 +8,6 @@
                 "hostname": "localhost",
                 "state": 0,
                 "output": "Everything looks okay! | perfdata=1;"
-        },   
+        }   
       ]
  }
