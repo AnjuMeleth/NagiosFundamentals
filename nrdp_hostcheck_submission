@@ -9,15 +9,5 @@
                 "state": 0,
                 "output": "Everything looks okay! | perfdata=1;"
         },   
-        {
-               "checkresult": {
-                   "type": "service",
-                   "checktype": "1"
-               },
-              "hostname": "localhost",
-              "servicename": "HostAlive",
-              "state": 1,
-               "output": "WARNING: Danger | perfdata=1;"
-          }
-     ]
+      ]
  }
